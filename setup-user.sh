@@ -178,16 +178,6 @@ fi
 find "$HOME/.gnupg" -type f -not -path "*#*" -exec chmod 600 {} \;
 find "$HOME/.gnupg" -type d -exec chmod 700 {} \;
 
-if is_chroot; then
-    echo >&2 "=== Running in chroot, skipping YubiKey configuration..."
-else
-    if [ ! -s "$HOME/.config/Yubico/u2f_keys" ]; then
-        echo "Configuring YubiKey for passwordless sudo (touch it now)"
-        mkdir -p "$HOME/.config/Yubico"
-        pamu2fcfg -umaximbaz > "$HOME/.config/Yubico/u2f_keys"
-    fi
-fi
-
 if [ -d "$HOME/.password-store" ]; then
     echo "Configuring automatic git push for pass"
     echo -e "#!/bin/sh\n\npass git push" > "$HOME/.password-store/.git/hooks/post-commit"

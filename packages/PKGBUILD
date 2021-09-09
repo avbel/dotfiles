@@ -73,7 +73,7 @@ depends=(
 
     # boot
     'arch-secure-boot'
-    'intel-ucode'
+    'amd-ucode'
     'terminus-font'
 
     # files
@@ -99,7 +99,6 @@ depends=(
     'imagemagick'
     'jq'
     'dfrs'
-    'seafile-client'
     'zathura-pdf-mupdf'
     'pdftk'
     'inotify-tools'
@@ -144,7 +143,6 @@ depends=(
     'overdue'
     'ccid'
     'pam-u2f'
-    'yubikey-touch-detector'
     'usbguard'
     'pinentry'
     'gcr'
@@ -156,7 +154,6 @@ depends=(
     'systembus-notify'
 
     # hardware
-    'dell-command-configure'
     'fwupd'
     'tlp'
     'dmidecode'
@@ -166,14 +163,16 @@ depends=(
     'bolt'
 
     # audio
-    'pulseaudio'
-    'pulseaudio-alsa'
-    'pulseaudio-bluetooth'
-    'pamixer'
-    'pavucontrol'
-    'playerctl'
-    'bluez'
-    'bluez-utils'
+    #'pulseaudio'
+    #'pulseaudio-alsa'
+    #'pulseaudio-bluetooth'
+    #'pamixer'
+    #'pavucontrol'
+    #'playerctl'
+    #'bluez'
+    #'bluez-utils'
+    'pipewire'
+    'pipewire-pulse'
 
     # ui
     'sway'
@@ -190,8 +189,7 @@ depends=(
     'light'
     'slurp'
     'wluma'
-    'vulkan-intel'
-    'vulkan-headers'
+    'amdvlk'
     'flashfocus-git'
     'qt5-wayland'
     'wtype'
@@ -277,7 +275,6 @@ depends=(
     'stylua-bin'
 
     # spell
-    'aspell-da'
     'aspell-en'
     'aspell-ru'
 
@@ -310,7 +307,8 @@ depends=(
     'chromium-widevine'
     'pdfjs'
     'python-tldextract'
-    'intel-media-driver'
+    'mesa-vdpau'
+    'libva-mesa-driver'
 
     # screenshots & gifs & desktop sharing
     'grim'
@@ -324,7 +322,6 @@ depends=(
     # video
     'mpv'
     'mpv-mpris'
-    'youtube-dl'
     'ffmpeg'
 
     # kubernetes
@@ -346,8 +343,5 @@ depends=(
     'hugo'
     'krita'
     'qalculate-gtk'
-    'libreoffice-fresh'
-    'transmission-gtk'
-    'signal-desktop'
     'libinput-gestures'
 )
